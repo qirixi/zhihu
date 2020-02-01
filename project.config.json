@@ -17,7 +17,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.10.1",
 	"appid": "wx5ebba74528f59c48",
-	"projectname": "miniprogram-3",
+	"projectname": "zhihu_wx",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
