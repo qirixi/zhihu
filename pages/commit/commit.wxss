@@ -1,0 +1,55 @@
+@import '/libs/iconfont.wxss';
+@import '/libs/weiui.wxss';
+/* pages/commit/commit.wxss */
+.question-wrp{
+    border-radius: 3px;
+    box-shadow: 0 1px 2px #bebebe;
+}
+.question-item{
+    width: 710rpx;
+    padding: 40rpx 20rpx 5rpx;
+    background: #fff;
+}
+.question-item .que-title{
+    padding: 0rpx 20rpx 5rpx;
+    font-size: 38rpx;
+}
+
+.wrapper {
+  padding: 5px;
+}
+
+.iconfont {
+  display: inline-block;
+  padding: 8px 8px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.toolbar {
+  box-sizing: border-box;
+  /* border: 1px solid #ccc; */
+  border-bottom: 0;
+  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+}
+
+
+.ql-container {
+  box-sizing: border-box;
+  padding: 12px 15px;
+  width: 100%;
+  min-height: 30vh;
+  height: auto;
+  /* border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc; */
+  background: #fff;
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.ql-active {
+  color: #06c;
+}

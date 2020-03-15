@@ -16,9 +16,7 @@ Page({
   },
   onLoad: function () {
     console.log('onLoad')
-    //var that = this
-    //调用应用实例的方法获取全局数据
-
+  
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,

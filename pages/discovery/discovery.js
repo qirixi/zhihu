@@ -2,7 +2,7 @@
 var util = require('../../utils/util.js')
 Page({
   data: {
-    navTab: ["推荐", "圆桌", "热门", "收藏"],
+    navTab: ["推荐", "热点", "关注"],
     currentNavtab: "0",
     imgUrls: [
       '../../images/24213.jpg',
