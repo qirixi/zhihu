@@ -15,7 +15,7 @@ Page({
   },
   bindQueTap: function() {
     wx.navigateTo({
-      url: '../question/question'
+      url: '../question/question?question_id=1'
     })
   },
   onLoad: function () {

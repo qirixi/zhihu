@@ -3,26 +3,26 @@
     <view class="question-wrp">
         <view class="question-item">
             <view class="que-tag">
-                <block wx:for="{{questionInfo.question_tag_list}}" wx:key="key" >
+                <block wx:for="{{questionInfo.tags}}" wx:key="key" >
                     <text class="tag">{{item}}</text>
                 </block>
 
             </view>
             <view class="que-title">
-                {{questionInfo.question_title}}
+                {{questionInfo.title}}
             </view>
             <view class="que-content">
-                 {{questionInfo.question_content}}
+                 {{questionInfo.body}}
             </view>
             <view class="que-follow">
                 <view class="left">
                     <view class="watch">
                         <image src="../../images/eye.png"></image>
-                        <text>{{questionInfo.watch_num}}</text>
+                        <text>{{questionInfo.clicks}}</text>
                     </view>
                     <view class="comment">
                         <image src="../../images/comment2.png"></image>
-                        <text>{{questionInfo.comment_num}}</text>
+                        <text>{{answerList.count}}</text>
                     </view>
                 </view>
                 <view class="right">
@@ -42,27 +42,27 @@
         </view>
     </view>
     <view class="answer-feed">
-        <block wx:for="{{questionInfo.answer_list}}" wx:key="key" >
-            <view  bindtap="bindItemTap" class="feed-item">
+        <block wx:for="{{answerList.results}}" wx:key="key" >
+            <view  data-id='{{item.id}}' bindtap="bindItemTap" class="feed-item">
                 <view class="feed-source">
                     <a class="" bindTap="">
                         <view class="avatar">
-                            <image src="{{item.feed_source_img}}"></image>
+                            <image src="{{item.author.avatar_url}}"></image>
                         </view>
-                        <text>{{item.feed_source_name}}</text>
+                        <text>{{item.author.nick_name}}</text>
                     </a>
                 </view>
                 <view class="feed-content">
                     <view class="answer-body">
                         <view>
-                            <text class="answer-txt">{{item.answer_content}}</text>
+                            <text class="answer-txt">{{item.content}}</text>
                         </view>
                         <view class="answer-actions">
                             <view class="like dot">
-                                <a>{{item.good_num}} 赞同</a>
+                                <a>{{item.vote}} 赞同</a>
                             </view>
                             <view class="comments">
-                                <a>{{item.comment_num}} 评论 </a>
+                                <a>{{item.comments_num}} 评论 </a>
                             </view>
                             
 

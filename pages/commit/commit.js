@@ -1,22 +1,30 @@
 // pages/commit/commit.js
+var request = require('../../utils/request.js')
+var app = getApp()
 Page({
 
   data: {
     pageData: {
-      content: "hello world"
+      content: ""
     },
-    content: '',
     formats: {}, // 样式
+    formData: {},
     placeholder: '开始输入...',
   },
-  onLoad() {
+  onLoad(options) {
     //that = this;
+    console.log(app.globalData.userInfo);
+    this.setData({
+      ['formData.question']: options.question,
+    })
+    
   },
 
   /** editor 部分 **/
   getEditorValue(e) {
     this.setData({
-      ['formData.content']: e.detail.html
+      ['formData.content']: e.detail.html,
+      content: e.detail.html
     })
   },
   onEditorReady() {
@@ -67,39 +75,58 @@ Page({
         // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
         const tempFilePaths = res.tempFilePaths
         //执行上传文件操作
-        wx.uploadFile({
-          url: config.HOME + config.url.uploadFile, //仅为示例，非真实的接口地址
-          filePath: tempFilePaths[0],
-          name: 'file',
-          formData: {},
-          success(res) {
-            wx.hideLoading();
-            app.myToast('上传成功！');
-            const data = JSON.parse(res.data);//获取到的json 转成数组格式 进行赋值 和渲染图片
-            console.log(data.data.src);
-            _this.editorCtx.insertImage({
-              src: config.HOME + data.data.src,
-              data: {
-                id: 'abcd',
-                role: 'god'
-              },
-              success: function () {
-                console.log('insert image success')
-              }
-            })
-          },
-          fail(e) {
-            wx.hideLoading();
-            console.log(e);
-          },
-          complete(e) {
-            wx.hideLoading();
-            console.log(e);
-          }
+        request.CreateHeader("media/", function (header){
+          wx.uploadFile({
+            url: request.apiHost+"media/", //仅为示例，非真实的接口地址
+            filePath: tempFilePaths[0],
+            header: header,
+            name: 'src',
+            formData: {},
+            success(res) {
+              wx.hideLoading();
+              console.log('上传成功！');
+              
+              const data = JSON.parse(res.data);//获取到的json 转成数组格式 进行赋值 和渲染图片
+              console.log(data.src);
+              _this.editorCtx.insertImage({
+                src: data.src,
+                data: {
+                  id: data.id,
+                  role: 'god'
+                },
+                success: function () {
+                  console.log('insert image success')
+                }
+              })
+            },
+            fail(e) {
+              wx.hideLoading();
+              console.log(e);
+            },
+            complete(e) {
+              wx.hideLoading();
+              console.log(e);
+            }
+          })
         })
+        
       }
     })
   },
     /** editor 部分结束 **/
 
+  formSubmit: function (e) {
+    
+    request.postRequest('answers/', this.data.formData,
+      function (res) {
+        let res_data = res.data
+        wx.navigateTo({
+          url: '../answer/answer?answer=' + res_data.id
+        })
+      },
+      function (error) {
+        console.log(error);
+      }
+    )
+  },
 })

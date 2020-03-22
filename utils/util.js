@@ -11,6 +11,10 @@ function formatTime(date) {
   return [year, month, day].map(formatNumber).join('/') + ' ' + [hour, minute, second].map(formatNumber).join(':')
 }
 
+function delHtmlTag(str) {
+  return str.replace(/<[^>]+>/g, "");//去掉所有的html标记
+}
+
 function formatNumber(n) {
   n = n.toString()
   return n[1] ? n : '0' + n
@@ -73,6 +77,7 @@ module.exports.getNext = getNext;
 module.exports.getDiscovery = getDiscovery;
 module.exports.discoveryNext = discoveryNext;
 module.exports.getQuestion = getQuestion;
+module.exports.delHtmlTag = delHtmlTag;
 
 
 
