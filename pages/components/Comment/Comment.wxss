@@ -1,0 +1,151 @@
+.comment {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 9999;
+}
+
+.pen {
+  width: 41rpx;
+  margin-left: 20rpx;
+  height: 41rpx;
+  margin-top: 10rpx;
+}
+
+.pen-div {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.pen-text {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.pen-input {
+  margin-left: 6rpx;
+  line-height: 60rpx;
+  font-size: 24rpx;
+  font-weight: 100rpx;
+  letter-spacing: 2rpx;
+}
+
+.showBottom {
+  width: 100%;
+  height: 92rpx;
+  border-top: 1rpx solid #e1e1e1;
+}
+
+.showText {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+  height: 60rpx;
+  background: #e1e1e1;
+  margin: 15rpx;
+  margin-left: 38rpx;
+  border-radius: 50rpx;
+}
+
+.showButtom {
+  display: inline-block;
+  vertical-align: top;
+  width: 40%;
+  height: 80rpx;
+}
+
+.comment-number-ioc{
+  width:51rpx;
+  margin-left:48rpx;
+  height:51rpx;
+  margin-top:23rpx;
+}
+
+.cnNumber {
+  position: absolute;
+  width: 45rpx;
+  height: 20rpx;
+  border-radius: 30rpx;
+  background: red;
+  color: #fff;
+  font-size: 18rpx;
+  line-height: 20rpx;
+  text-indent: 4rpx;
+  top: 14rpx;
+  left: 500rpx;
+}
+
+.collect-ioc {
+  width:51rpx;
+  margin-left:51rpx;
+  height:46rpx;
+  margin-top:20rpx;
+}
+
+.comment-number {
+  display:inline-block;
+  vertical-align: top;
+}
+
+.collect {
+  display:inline-block;
+  vertical-align: top;
+}
+
+.share {
+  display:inline-block;
+  vertical-align: top;
+}
+
+.share-ioc {
+  width:53rpx;
+  margin-left:51rpx;
+  height:46rpx;
+  margin-top:20rpx;
+}
+
+.send-comment {
+  width:100%;
+  height:86rpx;
+  margin: 5rpx;
+  border-top:1rpx solid #e1e1e1;
+}
+
+.send-input {
+  width:530rpx;
+  min-height: 50rpx;
+  max-height:50rpx;
+  height: 50rpx;
+  background:#e1e1e1;
+  border-radius:30rpx;
+  outline:none;
+  overflow:hidden;
+  padding-left:20rpx;
+  padding-top:10rpx;
+  margin-bottom:24rpx;
+
+}
+
+.send-view {
+  display:inline-block;
+  vertical-align:top;
+  margin:15rpx 15rpx 15rpx 55rpx;
+}
+
+.send-buttom {
+  display:inline-block;
+  vertical-align:top;
+  margin:18rpx 22rpx 18rpx 18rpx;
+}
+
+.send-text {
+  font-size:34rpx;
+  font-weight:320;
+  color:#e1e1e1;
+}
+
+.activty {
+  color:#009a61
+}

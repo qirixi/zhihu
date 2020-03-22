@@ -20,6 +20,12 @@ Page({
       url: '../question/question?question=' + this.data.question_id
     })
   },
+  //事件处理函数
+  toComment: function () {
+    wx.navigateTo({
+      url: '../answer_comment/ansComment?answer=' + this.data.answer_id
+    })
+  },
   onLoad: function (options) {
     console.log('onLoad')
     this.setData({

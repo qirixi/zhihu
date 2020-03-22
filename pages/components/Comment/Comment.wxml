@@ -1,0 +1,13 @@
+<view class="comment">
+  <view class="send-comment">
+    <view class="send-view">
+      <textarea value="{{content}}" bindinput="bindinput" auto-focus="{{!sendComment}}"
+       adjust-position="false" placeholder="{{placeholder}}" 
+       contenteditable="true" maxlength="{{maxlength}}" auto-height="true" class="send-input"></textarea>
+    </view>
+    <view class="send-buttom">
+      <text wx:if="{{!activty}}" class="send-text">发布</text>
+      <text wx:if="{{activty}}" class="send-text activty" catchtap="sendPull">发布</text>
+    </view>
+  </view>
+</view>

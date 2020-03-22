@@ -1,6 +1,8 @@
 @import '/libs/iconfont.wxss';
 @import '/libs/weiui.wxss';
 /* pages/commit/commit.wxss */
+@import "../../wxParse/wxParse.wxss";
+
 .question-wrp{
     border-radius: 3px;
     box-shadow: 0 1px 2px #bebebe;

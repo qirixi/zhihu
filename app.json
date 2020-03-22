@@ -1,14 +1,13 @@
 {
   "pages": [
-    
     "pages/index/index",
     "pages/discovery/discovery",
     "pages/notify/notify",
     "pages/more/more",
     "pages/answer/answer",
     "pages/question/question",
-    "pages/commit/commit"
-
+    "pages/commit/commit",
+    "pages/answer_comment/ansComment"
   ],
   "window": {
     "backgroundTextStyle": "light",

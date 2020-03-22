@@ -1,0 +1,5 @@
+<!--pages/answer_comment/ansComment.wxml-->
+
+<reply comment_num="{{comment_num}}" comment_list="{{comment_list}}"></reply>
+<comment id="commentInput" bind:sendPull="sendPull">
+</comment>

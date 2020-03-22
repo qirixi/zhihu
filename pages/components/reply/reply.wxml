@@ -1,0 +1,29 @@
+<!--pages/components/reply/reply.wxml-->
+<view class="toats"  style='height:100%;'>
+  <view class="top">
+    <view class="top-title">{{comment_num}}条回复</view>
+  </view>
+  <scroll-view class="container" scroll-y="true" catchtap="loadMoreEvent" scroll-top="{{scrollTop}}">
+  <view class="all-comment">全部评论</view>
+
+  <block wx:for="{{comment_list}}" wx:key="key" >
+    <view class="tab-content title">
+      <view class="comment-list">
+        <view class="comment-item">
+          <view class="comment-person">
+            <image class="comment-person-avatar" src="{{item.author.avatar_url}}"></image>
+            <view class="comment-person-info ellipsis">
+              <view class="comment-person-name ellipsis">{{item.author.nick_name}}</view>
+              <view class="comment-time ellipsis">{{item.create_time}}</view>
+            </view>
+          </view>
+          <view class="comment-text">{{item.comment_content}}</view>
+          <view class="talk" bindtap="bindReply">1小时前\t\t.\t\t回复</view>
+        </view>
+      </view>
+    </view>
+  </block>
+  
+  </scroll-view>
+
+</view>

@@ -44,16 +44,15 @@
                     <image src="../../images/star2.png"></image>
                     <text>收藏</text>
                 </view>
-                <view class="operation-btn flex-item">
+                <view class="operation-btn flex-item" bindtap="toComment">
                     <image src="../../images/comment.png"></image>
                     <text>{{answerInfo.comments_num}}</text>
                 </view>
 
             </view>
         </view>
-
-
-
     </view>
+
 </view>
+
 
